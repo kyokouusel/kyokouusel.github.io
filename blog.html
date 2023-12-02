@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeisha's Webpage</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300,400,500,600,700,800,900&display=swap');
+* {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Poppins', sans-serif; 
+      }
+      html{
+        scroll-behavior: smooth;
+      }
+      
+      body
+      {
+          overflow-x: hidden;
+          background-color: #353831;
+          width: 100%;
+          height: auto;
+          background: url("img/blogg.png") no-repeat;
+          background-size: cover;
+          background-position: center;
+          padding: 70px 10% 0 ;
+
+      }  
+      #header
+      {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          padding: 30px 100px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 10000;
+          position: absolute;
+          background-color: transparent;
+      }
+      #header .logo
+      {
+          color: #fff;
+          font-weight: 700;
+          font-size: 3em;
+          text-decoration: none;
+          animation: slideRight 1s ease forwards;
+      }
+      #header ul
+      {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      #header ul li
+      {
+          list-style: none;
+          margin-left: 30px;
+      }
+      #header ul li a
+      {
+        display: inline-block;
+          text-decoration: none;
+          padding: 6px 15px;
+          color: #fff;
+          border-radius: 20px;
+          animation: slideTop .5s ease forwards;
+          animation-delay: calc(.2s * var(--i));
+      }
+      #header ul li a:hover,
+      #header ul li a:active
+      {
+          background: #8D735B;
+          color: #fff;
+      }
+        footer{
+          position: relative;
+          bottom: 0;
+          left: 0;
+          background-color: transparent;
+          text-align: center;
+          padding: 10px;
+          width: 100%;
+          font-size: 5mm;
+          color: #fff;
+      }
+      .about-content{
+        text-align: center;
+        color:white;
+        margin-top: 5rem;
+        margin-bottom: -100px;
+        animation: slideTop .5s ease forwards;
+        animation-delay: calc(.2s * var(--i));
+      }
+      .blog1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            color: white;
+            margin: 9%;
+            background-size: auto;
+          background-position: center;
+          
+        }
+        .blog1 p {
+            position: absolute;
+            vertical-align: middle;
+            font-size: 18px;
+            flex-direction: column;
+        }
+      .blog-img img{
+            height: 400px;
+            width: 400px;
+            max-width: 100%;
+           max-height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 8px;
+            box-shadow: #fff;
+            animation: zoomIn 1s ease forwards;
+        }
+        .description p{
+            margin-top: 17rem;
+            text-align: center;
+            margin-left: -45rem;
+            width: 50%;
+            background-color: #353831;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px;
+            animation: slideTop .5s ease forwards;
+            animation-delay: calc(.2s * var(--i));
+
+        }
+      .topic1{
+        text-align: center;
+        color:white;
+        margin-top: 5rem;
+        margin-bottom: 100px;
+        padding-top: 100px;
+        animation: slideTop .5s ease forwards;
+        animation-delay: calc(.2s * var(--i));
+      }
+      .topic1 h2{
+        margin-bottom: 2rem;
+        margin-top: 6rem;
+      }
+      .blog-con .blog-box{
+        position: relative;
+        border-radius: 2rem;
+        box-shadow: 0 0 1rem #8D735B;
+        overflow: hidden;
+        display: flex;
+        padding: 15px;
+        gap: 2.5rem;
+        color: #fff;
+        background-color: #353831;
+        font-size: 15px;
+        margin: 15px;
+      }
+
+      .blog-con img{
+        height: 300px;
+        width: auto;
+        display: grid;
+        align-self: center;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .blog-layer h3{
+        color: #8D735B;
+        padding: 5px;
+        font-size: 30px;
+      }
+      .blog-layer p{
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 20px;
+      }
+        /*KEYFRAMES ANIMATION*/
+        @keyframes slideRight{
+            0%{
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes slideTop{
+            0%{
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes slideBottom{
+            0%{
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fade{
+            0%{
+                transform: translateY(0px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes zoomIn{
+            0%{
+                transform: scale(0);
+                opacity: 0;
+            }
+            100%{
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+<body>
+    <header id="header">
+        <a class="logo">Sel.</a>
+        <ul>
+            <li><a href="index.html" style="--i:1;" class="active">HOME</a></li>
+            <li><a href="blog.html" style="--i:2;">BLOG ENTRIES</a></li>
+            <li><a href="flex.html" style="--i:3;">FLEX</a></li>
+        </ul>
+    </header>
+    <div class="about-content">
+        <h1 class="heading"> FAVOURITE LESSON</h1>
+    </div>
+    <section class="blog1" id="blog1">
+        <div class="blog-img">
+            <img src="img/chap6.png" alt="">
+        </div>
+        <div class="description">
+            <p style="color: #fff;">This is my favourite lesson from all the chapters because this lesson challenged me and im so interested to learn more and to improve my skills more.</p>
+        </div>
+    </section>
+    <section class="topic1" id="topic1">
+        <h2 class="heading">Output/ <span>Learning Every Lessons</span></h2>
+        
+        <div class="blog-con">
+            <div class="blog-box">
+                <img src="img/chap1.png" alt="">
+                <div class="blog-layer">
+                    <h3> Chapter I: What is Computing?</h3>
+                    <p>In this chapter, i learned about what is exactly a computing. I learned that computers have become an integral part of modern life, the TECH timeline research from Mechanical era to Pc & VLSI era, permeating various sectors such as academia, research, industry, government, and private organizations. The constant introduction of new applications highlights the dynamic nature of the field, driven by ongoing technological advancements.</p>
+                    <a href="#"><box-icon name='link-external'></box-icon></a>
+                </div>
+            </div>
+        </div>
+        <div class="blog-con">
+            <div class="blog-box">
+                <img src="img/chap2.png" alt="">
+                <div class="blog-layer">
+                <h3> Chapter II: Professions & Careers in Computing</h3>
+                <p> This chapter emphasizes the multitude of career opportunities available within computing, classifying them into eight distinct categories. These encompass programming and software development, information systems operation and management, telecommunications and networking, computer science research, graphics and multimedia, web and internet, and training and support. What stood out to me is the expectation of continued growth in computer-related careers, reflecting the escalating reliance on technology in everyday scenarios. This diverse array of career paths caters to a broad range of skills and interests, providing graduates of computer-related courses with opportunities for varied and fulfilling professional journeys.</p>
+                <a href="#"><box-icon name='link-external'></box-icon></a>
+                </div>
+            </div>
+        </div>
+        <div class="blog-con">
+            <div class="blog-box">
+                <img src="img/chap3.png" alt="">
+                <div class="blog-layer">
+                <h3> Chapter III: Information Processing Cycle</h3>
+                <p>In this chapter, I gained insights into the Information Processing Cycle, understanding its sequential phases of input, processing, storage, and output. The distinction between data and information was clarified, with data being raw facts and information representing organized and meaningful data. The concept of data processing was explored as a systematic manipulation to convert data into a more useful form. Moving to Chapter IV, the Introduction to Computer Systems outlined four essential components: hardware, software, people ware, and data ware. Hardware was detailed, encompassing input, output, and storage devices. Software was categorized into system and application software, each serving distinct purposes. People ware highlighted the human element in utilizing computers, and data ware encompassed tools for data management. This comprehensive understanding sets the foundation for delving deeper into the intricacies of computer systems.</p>
+                <a href="#"><box-icon name='link-external'></box-icon></a>
+                </div>
+            </div>
+        </div>
+        <div class="blog-con">
+            <div class="blog-box">
+                <img src="img/chap5.png" alt="">
+                <div class="blog-layer">
+                    <h3> Chapter V: Basic concept of Computer security</h3>
+                <p>In this chapter,  I delved into the fundamental concepts of computer security, focusing on data security, classification of information, and measures to ensure the security of personal information. Practical examples illustrated the importance of encrypting sensitive data before transmission, classifying information based on its sensitivity, and safeguarding personal information in various contexts. The chapter further expanded on common types of cybercrimes, shedding light on identity theft, malicious software, and various online threats. Exploring the realm of cybercriminals, I learned about different hacker types, from script kiddies to hacktivists, each with distinct motives and skill levels. The discussion on cyber-attacks and countermeasures introduced key concepts like network encryption, proxies, and firewalls, emphasizing their roles in enhancing online security. The exploration of cyber liability insurance underscored the financial protection businesses and individuals can seek against cyber-related incidents. Lastly, the research task on a famous cybercrime case allowed me to analyze a real-world scenario, considering the types of attacks, affected entities, response measures, and potential improvements for future prevention. This comprehensive understanding equips me with valuable insights into the multifaceted realm of computer security.</p>
+                <a href="#"><box-icon name='link-external'></box-icon></a>
+                </div>
+            </div>
+        </div>
+        <div class="blog-con">
+            <div class="blog-box">
+                <img src="img/chap6.png" alt="">
+                <div class="blog-layer">
+                    <h3> Chapter VI: Basic HTML & CSS</h3>
+                <p>In this chapter, I delved into the foundational aspects of HTML and CSS, learning that HTML serves as the standard markup language for creating web pages. It structures web content using elements represented by tags, defining the document's metadata, title, and visible content. Different HTML tags were introduced, ranging from headings and paragraphs to images and tables, each playing a crucial role in web page composition. HTML versions and the essential HTML tags were explored, providing a comprehensive understanding of the language's syntax and structure. The chapter also covered Cascading Style Sheets (CSS), a design language that modifies HTML elements' visual aspects, such as color, size, and layout. Three methods of inserting CSS—internal, inline, and external—were outlined, along with syntax examples for each. CSS selectors, including element, id, class, and grouping selectors, were explained, offering ways to style specific elements or groups of elements. The interaction between CSS and JavaScript was introduced, highlighting the distinctive roles of each in web development. </p>
+                <a href="#"><box-icon name='link-external'></box-icon></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>©Petancio 2023.</p>
+    </footer>

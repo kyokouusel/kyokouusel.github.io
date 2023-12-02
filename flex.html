@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeisha's Webpage</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300,400,500,600,700,800,900&display=swap');
+* {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Poppins', sans-serif; 
+      }
+      html{
+        scroll-behavior: smooth;
+      }
+      
+      body
+      {
+          overflow-x: hidden;
+          background-color: #353831;
+          width: 100%;
+          height: 100vh;
+          background: url("img/ex.jpg") no-repeat;
+          background-size: cover;
+          background-position: center;
+          padding: 70px 10% 0 ;
+
+      }  
+      #header
+      {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          padding: 30px 100px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 10000;
+          position: absolute;
+          background-color: transparent;
+      }
+      #header .logo
+      {
+          color: #fff;
+          font-weight: 700;
+          font-size: 3em;
+          text-decoration: none;
+          animation: slideRight 1s ease forwards;
+      }
+      #header ul
+      {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      #header ul li
+      {
+          list-style: none;
+          margin-left: 30px;
+      }
+      #header ul li a
+      {
+        display: inline-block;
+          text-decoration: none;
+          padding: 6px 15px;
+          color: #fff;
+          border-radius: 20px;
+          animation: slideTop .5s ease forwards;
+          animation-delay: calc(.2s * var(--i));
+      }
+      #header ul li a:hover,
+      #header ul li a:active
+      {
+          background: #8D735B;
+          color: #fff;
+      }
+        footer{
+          position: relative;
+          bottom: -170px;
+          left: 0;
+          background-color: transparent;
+          text-align: center;
+          padding: 10px;
+          width: 100%;
+          font-size: 5mm;
+          color: #fff;
+      }
+      .about-content{
+        text-align: center;
+        color:white;
+        margin-top: 5rem;
+        margin-bottom: -100px;
+        animation: slideTop .5s ease forwards;
+        animation-delay: calc(.2s * var(--i));
+
+      }
+      .flex1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            color: white;
+            margin: 9%;
+            background-size: auto;
+          background-position: center;
+          
+        }
+        .flex1 p {
+            position: absolute;
+            vertical-align: middle;
+            font-size: 18px;
+            flex-direction: column;
+        }
+        .flex1-img img{
+            height: 400px;
+            width: 400px;
+            max-width: 100%;
+           max-height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 8px;
+            box-shadow: #fff;
+            animation: zoomIn 1s ease forwards;
+        
+        }
+        .description p{
+            margin-top: 17rem;
+            text-align: center;
+            margin-left: -45rem;
+            width: 50%;
+            background-color: #353831;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px;
+            animation: slideTop .5s ease forwards;
+            animation-delay: calc(.2s * var(--i));
+
+        }
+
+        /*KEYFRAMES ANIMATION*/
+        @keyframes slideRight{
+            0%{
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes slideTop{
+            0%{
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes slideBottom{
+            0%{
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fade{
+            0%{
+                transform: translateY(0px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes zoomIn{
+            0%{
+                transform: scale(0);
+                opacity: 0;
+            }
+            100%{
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+<body>
+    <header id="header">
+        <a class="logo">Sel.</a>
+        <ul>
+            <li><a href="index.html" style="--i:1;" class="active">HOME</a></li>
+            <li><a href="blog.html" style="--i:2;">BLOG ENTRIES</a></li>
+            <li><a href="flex.html" style="--i:3;">FLEX</a></li>
+        </ul>
+    </header>
+    <div class="about-content">
+        <h1 class="heading"> FLEXING MY HANDSOME MAN</h1>
+    </div>
+    <section class="flex1" id="flex1">
+        <div class="flex1-img">
+            <img src="img/forflex.jpg" alt="">
+        </div>
+        <div class="description">
+            <p style="color: #fff;">My father serves as my inspiration, mentor, and role model. 
+                His unchanging dedication to his family and career has influenced my morals
+                and work ethic. He's a strong, kind man who is constantly willing to lend 
+                a helping hand and support. His insight has guided me throughout my life 
+                and taught me the value of honesty and tenacity. I'm proud of the 
+                principles he taught me, and I try to live up to the moral fortitude that characterizes him.</p>
+        </div>
+    </section>
+    <footer>
+        <p>©Petancio 2023.</p>
+    </footer>
